@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 
-const HeaderNavigation = (props) => {
+const Navigation = (props) => {
     return (
         <nav className={"header__nav " + (props.isNavOpen ? "header__nav_active" : "")}>
         <ul className="header__list">
@@ -29,5 +29,5 @@ const HeaderNavigation = (props) => {
     )
   }
   
-  export { HeaderNavigation }
+  export { Navigation }
 

@@ -1,6 +1,10 @@
+import React from 'react'
+
 const Login = () => {
     return (
-       console.log('1')
+       <div>
+           Login
+        </div>
     )
 }
 
