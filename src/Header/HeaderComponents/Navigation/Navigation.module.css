@@ -1,0 +1,61 @@
+.header__list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header__item {
+    margin-right: 45px;
+}
+
+.header__item:last-child {
+    margin-right: 0;
+}
+
+.search-form__wrap {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.search-form__info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-form__field {
+    width: 128px;
+    background: #FFCACA;
+    border: 0;
+    border-radius: 30px 0 0 30px;
+    padding-left: 10px;
+    font-weight: normal;
+    line-height: 20px;
+    transition: .3s linear;
+}
+
+.search-form__field::placeholder {
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.search-form__field:focus {
+    width: 228px;
+}
+
+.search-form__submit {
+    height: 22px;
+    width: 22px;
+    margin-right: 5px;
+    background: #FFCACA url(./img/search.svg) no-repeat center;
+    background-size: 15px;
+    border: 0;
+    border-radius: 0 30px 30px 0;
+
+}
+
+.header__link {
+    text-decoration: none;
+    color: black;
+}
