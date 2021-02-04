@@ -1,0 +1,34 @@
+.header__burger {
+    display: none;
+    width: 48px;
+    height: 28px;
+    position: relative;
+}
+
+.burger__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+}
+
+.burger__line_first {
+    top: 0;
+}
+
+.burger__line_second {
+    top: 50%;
+    transform: rotateY(-50%);
+}
+
+.burger__line_third {
+    bottom: 0;
+}
+
+@media (max-width: 781px) {
+    .header__burger {
+        display: block;
+    }
+}

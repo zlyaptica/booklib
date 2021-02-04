@@ -1,8 +1,9 @@
-import logo from '../img/logo.svg'
+import logo from '../../img/logo.svg'
+import {NavLink} from "react-router-dom";
 
 const Logo = () => {
     return (
-        <a href="/" className="header__home"><img src={logo} alt="logo" className="header__logo" /></a>
+        <NavLink to="/" ><img src={logo} alt="logo" /></NavLink>
     )
 }
 

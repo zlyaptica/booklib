@@ -13,18 +13,18 @@
     margin-right: 0;
 }
 
-.search-form__wrap {
+.searchForm__wrap {
     border: none;
     margin: 0;
     padding: 0;
 }
 
-.search-form__info {
+.searchForm__info {
     display: flex;
     flex-wrap: wrap;
 }
 
-.search-form__field {
+.searchForm__field {
     width: 128px;
     background: #FFCACA;
     border: 0;
@@ -35,17 +35,16 @@
     transition: .3s linear;
 }
 
-.search-form__field::placeholder {
+.searchForm__field::placeholder {
     font-weight: normal;
     line-height: 20px;
 }
 
-.search-form__field:focus {
+.searchForm__field:focus {
     width: 228px;
 }
 
-.search-form__submit {
-    height: 22px;
+.searchForm__submit {
     width: 22px;
     margin-right: 5px;
     background: #FFCACA url(./img/search.svg) no-repeat center;
@@ -58,4 +57,87 @@
 .header__link {
     text-decoration: none;
     color: black;
+}
+
+@media (max-width: 991px) {
+    .header__item {
+        margin-right: 35px;
+    }
+}
+
+@media (max-width: 781px) {
+    .header__nav {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: var(--header-background);
+        z-index: 10;
+        padding-top: 75px;
+        transform: translateX(100%);
+        transition: .3s all linear;
+    }
+
+    .header__navActive {
+        transform: translateX(0);
+    }
+
+    .header__list {
+        flex-direction: column;
+    }
+
+    .header__item {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .header__link {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .header__navClose {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 11;
+    }
+
+    .header__navCloseLine {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+    }
+
+    .header__navCloseLine:first-child {
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    .header__navCloseLine:last-child {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+
+    .searchForm__field {
+        width: 250px;
+    }
+
+    .searchForm__field:active {
+        width: 250px;
+    }
+
+    .searchForm__info, .search-form__submit {
+        height: 36px;
+    }
+
+    .searchForm__field::placeholder {
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 48px;
+    }
 }
