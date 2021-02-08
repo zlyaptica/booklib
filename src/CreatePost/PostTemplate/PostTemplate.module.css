@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap');
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.postTemplate {
+    margin: 0 auto;
+}
+
+.postTemplateWrapper {
+    padding: 0 50px 0 50px;
+}
+
+.postTemplateInfo {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.postTemplateHeader {
+    margin-bottom: 15px;
+}
+
+.postTemplateHead {
+    margin-bottom: 0;
+}
+
+.postTemplateMoreInfo {
+    display: flex;
+}
+
+.postTemplateRate {
+    display: flex;
+    align-items: center;
+}
+
+.postTemplateCreator {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #6b6b6b;
+    cursor: pointer;
+}
+
+.postTemplateDate {
+    color: #6b6b6b;
+}
+
+.postTemplateText {
+    text-align: justify;
+
+    font-family: 'Lora', serif;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+@media (max-width: 1199px) {
+    .wrapper {
+        width: 850px;
+    }
+
+    .postTemplateText {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .wrapper {
+        width: 660px;
+    }
+}
+
+@media (max-width: 781px) {
+    .wrapper {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrapper {
+        max-width: 70%;
+    }
+
+    .postTemplateWrapper {
+        padding: 0;
+    }
+}

@@ -2,7 +2,7 @@ import React from "react"
 import './../normalize.css'
 import {connect} from "react-redux";
 import {CreatePost} from "./CreatePost";
-import {addPost, updateNewPostHeader, updateNewPostText} from "../redux/createPostReducer";
+import {addPost} from "../redux/createPostReducer";
 
 let mapStateToProps = (state) => {
     return {
@@ -12,6 +12,6 @@ let mapStateToProps = (state) => {
     }
 }
 
-const CreatePostContainer = connect(mapStateToProps, {addPost, updateNewPostHeader, updateNewPostText})(CreatePost)
+const CreatePostContainer = connect(mapStateToProps, {addPost})(CreatePost)
 
 export {CreatePostContainer}

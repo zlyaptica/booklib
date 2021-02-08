@@ -1,8 +1,10 @@
 import {combineReducers, createStore} from 'redux'
-import {createPostReducer} from "./createPostReducer";
+import {createPostReducer} from './createPostReducer'
+import { reducer as formReducer } from 'redux-form'
 
 let reducers = combineReducers({
-    createPost: createPostReducer
+    createPost: createPostReducer,
+    form: formReducer
 })
 
 let store = createStore(reducers)

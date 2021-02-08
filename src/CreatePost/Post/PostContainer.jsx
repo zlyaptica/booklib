@@ -1,15 +1,13 @@
 import React from 'react'
-import {PostTemplate} from "../PostTemplate/PostTemplate";
+import {connect} from "react-redux";
+import {Post} from "./Post";
 
-const Post = (props) => {
-    debugger
-    let postsElements = props.state.posts.map(post => <PostTemplate header={props.header} text={props.text} />)
-
-    return (
-        <div>
-            {postsElements}
-        </div>
-    )
+let mapStateToProps = (state) => {
+    return {
+        posts: state.createPost.posts,
+    }
 }
 
-export {Post}
+const PostContainer = connect(mapStateToProps)(Post)
+
+export {PostContainer}

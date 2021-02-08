@@ -23,7 +23,7 @@ const Navigation = (props) => {
                 <NavLink to="/toprate" className={classes.header__link}>Топ рейтинга</NavLink>
             </li>
             <li className={classes.header__item}>
-                <NavLink to="/login" className={classes.header__link}>Войти</NavLink>
+                <NavLink to="/signin" className={classes.header__link}>Войти</NavLink>
             </li>
         </ul>
         <div className={classes.header__navClose} onClick={() => { props.setIsNavOpen(!props.isNavOpen) }}>
