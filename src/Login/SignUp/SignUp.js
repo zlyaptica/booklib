@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './SignUp.module.css'
 import {reduxForm} from "redux-form";
-import {SignUpForm} from "../SignIn/SignUpForm";
+import {SignUpForm} from "./SignUpForm";
 
 const SignUp = () => {
     return (

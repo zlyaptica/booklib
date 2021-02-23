@@ -1,7 +1,12 @@
 import classes from './Profile.module.css'
 import avatarBig from './img/AvatarBig.png'
+import {PostTemplate} from "../CreatePost/PostTemplate/PostTemplate";
+import React from "react";
 
-const Profile = () => {
+const Profile = (props) => {
+
+    let postsElements = props.posts.map(post => <PostTemplate header={post.headerPost} text={post.textPost} />)
+
     return (
         <div className={classes.profile}>
             <div className={classes.wrapper}>
@@ -16,7 +21,7 @@ const Profile = () => {
                     </div>
                 </div>
                 <div className={classes.profilePosts}>
-
+                    { postsElements }
                 </div>
             </div>
         </div>

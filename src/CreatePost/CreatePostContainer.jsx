@@ -1,4 +1,3 @@
-import React from "react"
 import './../normalize.css'
 import {connect} from "react-redux";
 import {CreatePost} from "./CreatePost";

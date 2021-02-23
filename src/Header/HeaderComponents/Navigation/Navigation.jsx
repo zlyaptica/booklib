@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import classes from './Navigation.module.css'
+import {SearchContainer} from "../Search/SearchContainer";
 
 
 const Navigation = (props) => {
@@ -7,14 +8,7 @@ const Navigation = (props) => {
         <nav className={classes.header__nav + ' ' + (props.isNavOpen ? classes.header__navActive : '')}>
         <ul className={classes.header__list}>
             <li className={classes.header__item}>
-                <form className={classes.searchForm}>
-                    <fieldset className={classes.searchForm__wrap}>
-                        <p className={classes.searchForm__info}>
-                            <input className={classes.searchForm__field} type="text" placeholder="Поиск по сайту..." />
-                            <button className={classes.searchForm__submit} type="submit"  />
-                        </p>
-                    </fieldset>
-                </form>
+                <SearchContainer />
             </li>
             <li className={classes.header__item}>
                 <NavLink to="/createpost" className={classes.header__link}>Создать пост</NavLink>

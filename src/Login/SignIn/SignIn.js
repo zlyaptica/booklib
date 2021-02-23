@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './SignIn.module.css'
 import {NavLink} from "react-router-dom";
 import {reduxForm} from "redux-form";
-import {SignInForm} from "../SignUp/SignInForm";
+import {SignInForm} from "./SignInForm";
 
 const SignIn = () => {
     return (
