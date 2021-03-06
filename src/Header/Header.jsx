@@ -10,14 +10,12 @@ const Header = (props) => {
     return (
         <header className={classes.header}>
             <div className={classes.wrapper}>
-                <div className={classes.header__wrapper}>
-                    <Logo />
-                    <Navigation isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen}/>
-                    <CloseBurger isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen}/>
-                </div>
+                <Logo />
+                <Navigation isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen}/>
+                <CloseBurger isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen}/>
             </div>
         </header> 
     )
 }
-
+    
 export { Header }

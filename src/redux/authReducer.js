@@ -1,6 +1,8 @@
 const SET_USER_DATA = 'SET_USER_DATA'
 
-let initialState = {}
+let initialState = {
+    isAuthenticated: false
+}
 
 const authReducer = (state = initialState, action) => {
     switch (action.type) {

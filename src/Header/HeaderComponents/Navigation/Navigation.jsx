@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 import classes from './Navigation.module.css'
-import {SearchContainer} from "../Search/SearchContainer";
+import {Search} from "../Search/Search";
 
 
 const Navigation = (props) => {
@@ -8,7 +8,7 @@ const Navigation = (props) => {
         <nav className={classes.header__nav + ' ' + (props.isNavOpen ? classes.header__navActive : '')}>
         <ul className={classes.header__list}>
             <li className={classes.header__item}>
-                <SearchContainer />
+                <Search />
             </li>
             <li className={classes.header__item}>
                 <NavLink to="/createpost" className={classes.header__link}>Создать пост</NavLink>

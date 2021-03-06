@@ -1,13 +1,10 @@
-import {SearchForm} from "./SerachForm";
+import {SearchForm} from "./SearchForm";
 import {reduxForm} from "redux-form";
 
 const Search = (props) => {
-    const findTextPost = (values) => {
-        props.findPost(values.searchText)
-    }
 
     return (
-        <SearchReduxForm onSubmit={findTextPost}/>
+        <SearchReduxForm />
     )
 }
 

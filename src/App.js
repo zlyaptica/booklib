@@ -2,14 +2,12 @@ import React from 'react'
 import {BrowserRouter, Route} from 'react-router-dom'
 
 import {Header} from './Header/Header'
-import {SignUp} from "./Login/SignUp/SignUp";
-import {FindText} from "./FindText/FindText";
 import {UserPost} from "./Profile/UserPost/UserPost";
-
-import {CreatePostContainer} from "./CreatePost/CreatePostContainer";
-import PostContainer from "./CreatePost/Post/PostContainer";
+import {SignIn} from "./Login/SignIn/SignIn";
 import ProfileContainer from "./Profile/ProfileContainer";
-import SignInContainer from "./Login/SignIn/SignInContainer";
+import SignUpContainer from "./Login/SignUp/SignUpContainer";
+import {Post} from "./CreatePost/Post/Post";
+import { CreatePost } from './CreatePost/CreatePost';
 
 const App = () => {
     return (
@@ -17,13 +15,12 @@ const App = () => {
             <div>
                 <Header/>
 
-                <Route path='/signin' render={ () => <SignInContainer /> } />
-                <Route path='/signup' render={ () => <SignUp /> } />
-                <Route path='/createpost' render={ () => <CreatePostContainer /> } />
+                <Route path='/signin' render={ () => <SignIn /> } />
+                <Route path='/signup' render={ () => <SignUpContainer />} />
+                <Route path='/createpost' render={ () => <CreatePost /> } />
                 <Route path='/profile' render={ () => <ProfileContainer /> } />
-                <Route path='/findtext' render={ () => <FindText /> }/>
                 <Route path='/userpost' render={ () => <UserPost /> }/>
-                <Route path='/' render={ () => <PostContainer /> } exact/>
+                <Route path='/' render={ () => <Post /> } exact/>
             </div>
         </BrowserRouter>
     )
