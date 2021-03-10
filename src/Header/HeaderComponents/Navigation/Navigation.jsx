@@ -14,19 +14,19 @@ const Navigation = (props) => {
             </li>
             <li className={classes.header__item}>
                 {isAuthenticated ? 
-                    <NavLink to="/createpost" className={classes.header__link}>Создать пост</NavLink>
+                    <NavLink onClick={() => { props.setIsNavOpen(!props.isNavOpen) }} to="/createpost" className={classes.header__link}>Создать пост</NavLink>
                 : 
                     null
                 }
             </li>
             <li className={classes.header__item}>
-                <NavLink to="/toprate" className={classes.header__link}>Топ рейтинга</NavLink>
+                <NavLink onClick={() => { props.setIsNavOpen(!props.isNavOpen) }} to="/toprate" className={classes.header__link}>Топ рейтинга</NavLink>
             </li>
             <li className={classes.header__item}>
                 {isAuthenticated ? 
-                    <NavLink to="/profile" className={classes.header__link}>Профиль</NavLink> 
+                    <NavLink onClick={() => { props.setIsNavOpen(!props.isNavOpen) }} to="/profile" className={classes.header__link}>Профиль</NavLink> 
                 : 
-                    <NavLink to="/signin" className={classes.header__link}>Войти</NavLink>
+                    <NavLink onClick={() => { props.setIsNavOpen(!props.isNavOpen) }} to="/signin" className={classes.header__link}>Войти</NavLink>
                 }                          
             </li>
         </ul>
