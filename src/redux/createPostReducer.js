@@ -1,3 +1,5 @@
+import {postsAPI} from "../api/api"
+
 const ADD_POST = 'ADD_POST'
 
 let initialState = {
@@ -13,7 +15,14 @@ const createPostReducer = (state = initialState, action) => {
     }
 }
 
-// export const addPost = (newPostHeader, newPostText) => ({type: ADD_POST, newPostHeader, newPostText})
-// export const clearState = () => ({type: CLEAR_STATE})
+export const getPosts = () => dispatch => {
+    postsAPI.getPosts().then(data => {
+        dispatch({type: "ADD_POST", data: data.items})
+    })
+}
+
+export const postPost = ({newPostHeader, newPostText}) => dispatch => {
+    postsAPI.postPost({header: newPostHeader, text_post: newPostText})
+}
 
 export {createPostReducer}

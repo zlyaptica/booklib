@@ -41,6 +41,10 @@ input, textarea {
     cursor: pointer;
 }
 
+.createpost__warning {
+    
+}
+
 @media (max-width: 991px) {
     .wrapper {
         max-width: 500px;

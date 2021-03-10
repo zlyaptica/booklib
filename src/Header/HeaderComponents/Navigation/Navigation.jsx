@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom"
 import classes from './Navigation.module.css'
 import {Search} from "../Search/Search";
+import { useSelector } from "react-redux";
 
 
 const Navigation = (props) => {
+    const isAuthenticated = useSelector(state => state.auth.isAuthenticated)
     return (
         <nav className={classes.header__nav + ' ' + (props.isNavOpen ? classes.header__navActive : '')}>
         <ul className={classes.header__list}>
@@ -11,13 +13,21 @@ const Navigation = (props) => {
                 <Search />
             </li>
             <li className={classes.header__item}>
-                <NavLink to="/createpost" className={classes.header__link}>Создать пост</NavLink>
+                {isAuthenticated ? 
+                    <NavLink to="/createpost" className={classes.header__link}>Создать пост</NavLink>
+                : 
+                    null
+                }
             </li>
             <li className={classes.header__item}>
                 <NavLink to="/toprate" className={classes.header__link}>Топ рейтинга</NavLink>
             </li>
             <li className={classes.header__item}>
-                <NavLink to="/signin" className={classes.header__link}>Войти</NavLink>
+                {isAuthenticated ? 
+                    <NavLink to="/profile" className={classes.header__link}>Профиль</NavLink> 
+                : 
+                    <NavLink to="/signin" className={classes.header__link}>Войти</NavLink>
+                }                          
             </li>
         </ul>
         <div className={classes.header__navClose} onClick={() => { props.setIsNavOpen(!props.isNavOpen) }}>

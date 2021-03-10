@@ -18,7 +18,7 @@ const PostTemplate = (props) => {
                         </div>
                         <div className={classes.postTemplateMoreInfo}>
                             <NavLink className={classes.postTemplateCreator} to="/profile">creator</NavLink>
-                            <div className={classes.postTemplateDate}>5 минут назад</div>
+                            <div className={classes.postTemplateDate}>{props.date.toString()}</div>
                         </div>
                     </div>
                     <p className={classes.postTemplateText}>{props.text}</p>

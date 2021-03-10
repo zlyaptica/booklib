@@ -5,14 +5,48 @@ const instance = axios.create({
     withCredentials: true
 })
 
-export const usersAPI = {
+export const postsAPI = {
     getPosts() {
         return instance.get(`posts`).then(response => {
             return response.data
         })
     },
-    postPosts(post) {
-        return instance.post(`private/posts`, post)
+    postPost({header, text_post}) {
+        return instance.post(`private/posts`, {
+            header: header, 
+            text_post: text_post
+        })
+    }
+}
+
+// export const usersAPI = {
+//     getUser() {
+//         return instance.get(`users`).then(response => {
+//             return response.data
+//         })
+//     }
+// }
+
+export const authAPI = {
+    getMe() {
+        try {
+            return instance.get(`private/whoami`).then()
+        } catch(e) {
+            debugger
+        }
+    },
+    login(email, password) {
+        return instance.post(`sessions`, {
+            email: email,
+            password: password,
+        })
+    },
+    signUp(username, email, password) {
+        return instance.post(`users`, {
+            username: username,
+            email: email,
+            password: password
+        })
     },
     signIn() {
         return instance.get(`private/whoami`).then(response => {
