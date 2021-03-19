@@ -13,24 +13,24 @@ input, textarea {
     margin: 0 auto;
 }
 
-.createpost__headerName {
+.headerName {
     margin-bottom: 10px;
     font-size: 24px;
 }
 
-.createpost__name {
+.name {
     margin-bottom: 20px;
 }
 
-.createpost__text {
+.text {
     margin-bottom: 20px;
 }
 
-.createpost__textAreaText {
+.textAreaText {
     height: 500px;
 }
 
-.createpost__button {
+.publish {
     position: absolute;
     right: 0;
     background-color: white;
@@ -41,17 +41,17 @@ input, textarea {
     cursor: pointer;
 }
 
-.createpost__warning {
-    
-}
-
 @media (max-width: 991px) {
     .wrapper {
         max-width: 500px;
     }
 
-    .createpost__button {
+    .publish {
         font-size: 24px;
+    }
+
+    .warning {
+        font-size: 26px;
     }
 }
 
@@ -61,14 +61,14 @@ input, textarea {
         max-width: 80%;
     }
 
-    .createpost__headerName {
+    .headerName {
         font-size: 24px;
     }
 }
 
 @media (max-width: 480px) {
 
-    .createpost__button {
+    .publish {
         font-size: 18px;
     }
 }

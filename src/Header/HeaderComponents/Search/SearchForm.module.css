@@ -1,16 +1,15 @@
-.searchForm__wrap {
+.wrap {
     border: none;
     margin: 0;
     padding: 0;
 }
 
-.searchForm__info {
+.info {
     display: flex;
     flex-wrap: wrap;
 }
 
-.searchForm__field {
-    /*width: 128px;*/
+.field {
     background: #FFCACA;
     border: 0;
     border-radius: 30px 0 0 30px;
@@ -20,16 +19,12 @@
     transition: .3s linear;
 }
 
-.searchForm__field::placeholder {
+.field::placeholder {
     font-weight: normal;
     line-height: 20px;
 }
 
-.searchForm__field:focus {
-    /*width: 228px;*/
-}
-
-.searchForm__submit {
+.submit {
     width: 22px;
     margin-right: 5px;
     background: #FFCACA url(./img/search.svg) no-repeat center;
@@ -39,20 +34,16 @@
 }
 
 @media (max-width: 781px) {
-    .searchForm__field {
+    .field {
         width: 250px;
         height: 34px;
     }
 
-    .searchForm__field:active {
+    .field:active {
         width: 260px;
     }
 
-    /*.searchForm__info, .search-form__submit {*/
-    /*    height: 36px;*/
-    /*}*/
-
-    .searchForm__field::placeholder {
+    .field::placeholder {
         font-weight: normal;
         font-size: 24px;
         line-height: 48px;

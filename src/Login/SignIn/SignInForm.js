@@ -9,10 +9,11 @@ const maxLengthPassword30 = maxLength(30)
 const SignInForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
-            <Field className={classes.signInInput} name="email" type="text" placeholder="Почта" component={Input} validate={[required]}/>
-            <Field className={classes.signInInput} name="password" type="password" placeholder="Пароль"
+            <Field className={classes.input} name="email" type="text" placeholder="Почта" component={Input}
+                   validate={[required]}/>
+            <Field className={classes.input} name="password" type="password" placeholder="Пароль"
                    component={Input} validate={[required, minLengthPassword8, maxLengthPassword30]}/>
-            <Field name="rememberMe" type="checkbox" component={Input} />
+            <Field name="rememberMe" type="checkbox" component={Input}/> Запомнить меня <br></br>
             <button className={classes.signInButton}>Войти</button>
         </form>
     )

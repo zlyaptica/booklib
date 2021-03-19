@@ -9,45 +9,41 @@
     margin: 0 auto;
 }
 
-.postTemplateWrapper {
-    padding: 0 50px 0 50px;
-}
-
-.postTemplateInfo {
+.info {
     display: flex;
     justify-content: space-between;
     align-content: center;
 }
 
-.postTemplateHeader {
+.header {
     margin-bottom: 15px;
 }
 
-.postTemplateHead {
+.head {
     margin-bottom: 0;
 }
 
-.postTemplateMoreInfo {
+.moreInfo {
     display: flex;
 }
 
-.postTemplateRate {
+.rate {
     display: flex;
     align-items: center;
 }
 
-.postTemplateCreator {
+.creator {
     margin-right: 10px;
     text-decoration: none;
     color: #6b6b6b;
     cursor: pointer;
 }
 
-.postTemplateDate {
+.date {
     color: #6b6b6b;
 }
 
-.postTemplateText {
+.text {
     text-align: justify;
 
     font-family: 'Lora', serif;
@@ -60,7 +56,7 @@
         width: 850px;
     }
 
-    .postTemplateText {
+    .text {
         font-size: 20px;
     }
 }
@@ -82,7 +78,7 @@
         max-width: 70%;
     }
 
-    .postTemplateWrapper {
+    .wrapper {
         padding: 0;
     }
 }

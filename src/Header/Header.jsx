@@ -1,21 +1,21 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import classes from './Header.module.css'
 import '../normalize.css'
-import { Logo } from './HeaderComponents/Logo/Logo'
-import { CloseBurger } from './HeaderComponents/CloseBurger/CloseBurger'
-import { Navigation } from './HeaderComponents/Navigation/Navigation'
+import {Logo} from './HeaderComponents/Logo/Logo'
+import {CloseBurger} from './HeaderComponents/CloseBurger/CloseBurger'
+import {Navigation} from './HeaderComponents/Navigation/Navigation'
 
-const Header = (props) => {
+const Header = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
     return (
         <header className={classes.header}>
             <div className={classes.wrapper}>
-                <Logo />
+                <Logo/>
                 <Navigation isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen}/>
                 <CloseBurger isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen}/>
             </div>
-        </header> 
+        </header>
     )
 }
-    
-export { Header }
+
+export {Header}

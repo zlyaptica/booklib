@@ -1,6 +1,6 @@
 import {applyMiddleware, combineReducers, createStore, compose} from 'redux'
 import {createPostReducer} from './createPostReducer'
-import { reducer as formReducer } from 'redux-form'
+import {reducer as formReducer} from 'redux-form'
 import {authReducer} from './authReducer'
 import thunkMiddleware from 'redux-thunk'
 
